@@ -53,8 +53,8 @@ hl.on("hyprland.start", function ()
 	hl.exec_cmd(terminal)
 	hl.exec_cmd(browser)
 	hl.exec_cmd("waybar")
+    hl.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 0")
 end)
-
 
 -------------------------------
 ---- ENVIRONMENT VARIABLES ----
