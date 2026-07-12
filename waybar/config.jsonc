@@ -65,16 +65,19 @@
             "custom/screenrecording-indicator",
             "custom/updatespacman",
             "custom/update",
-            "custom/separator6"
+            "custom/separator"
         ],
 
         "modules-center": [
+            "custom/separator",
+            "custom/clock",
+            "custom/separator2"
         ],
 
         "modules-right": [
             "custom/separator",
-            "custom/clock",
-            "custom/separator3",
+            // "custom/clock",
+            // "custom/separator3",
             "pulseaudio",
             "custom/separator4",
             "network",
