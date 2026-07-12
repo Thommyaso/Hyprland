@@ -53,7 +53,7 @@ hl.on("hyprland.start", function ()
 	hl.exec_cmd(terminal)
 	hl.exec_cmd(browser)
 	hl.exec_cmd("waybar")
-    hl.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 0")
+    hl.exec_cmd("pactl set-sink-volume @DEFAULT_SINK@ 0%")
 end)
 
 -------------------------------
@@ -219,7 +219,6 @@ hl.config({
     },
 })
 
-
 ---------------
 ---- INPUT ----
 ---------------
@@ -231,6 +230,8 @@ hl.config({
         kb_model   = "",
         kb_options = "",
         kb_rules   = "",
+        repeat_delay = 150,
+        repeat_rate = 40,
 
         follow_mouse = 0,
 
