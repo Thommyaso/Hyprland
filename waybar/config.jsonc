@@ -1,0 +1,91 @@
+[
+    {
+        "include": [
+            "./common.jsonc"
+        ],
+
+        "name": "main",
+        "output": [
+            "!eDP-1",
+            "*"
+        ],
+        "modules-left": [
+            // "custom/omarchy",
+            "hyprland/workspaces",
+            "custom/separator",
+            "tray",
+            "custom/separator7",
+            "idle_inhibitor",
+            "custom/voxtype",
+            "custom/idle-indicator",
+            "custom/notification-silencing-indicator",
+            "custom/screenrecording-indicator",
+            "custom/updatespacman",
+            "custom/update",
+            "custom/separator2",
+            "mpris",
+            "custom/separator6"
+        ],
+        "modules-center": ["custom/separator", "custom/clock", "custom/separator2"],
+        "modules-right": [
+            "custom/separator",
+            "pulseaudio",
+            "custom/separator3",
+            "bluetooth",
+            "custom/separator4",
+            "network",
+            "custom/separator3",
+            "memory",
+            "custom/separator3",
+            "cpu",
+            "custom/separator3",
+            "power-profiles-daemon",
+            "custom/separator3",
+            "battery"
+        ]
+    },
+    {
+        "include": [
+            "./common.jsonc"
+        ],
+
+        "name": "laptop",
+        "output": "eDP-1",
+
+        "modules-left": [
+            // "custom/omarchy",
+            "hyprland/workspaces",
+            "custom/separator",
+            "tray",
+            "custom/separator7",
+            "idle_inhibitor",
+            "custom/voxtype",
+            "custom/idle-indicator",
+            "custom/notification-silencing-indicator",
+            "custom/screenrecording-indicator",
+            "custom/updatespacman",
+            "custom/update",
+            "custom/separator6"
+        ],
+
+        "modules-center": [
+        ],
+
+        "modules-right": [
+            "custom/separator",
+            "custom/clock",
+            "custom/separator3",
+            "pulseaudio",
+            "custom/separator4",
+            "network",
+            "custom/separator3",
+            "memory",
+            "custom/separator3",
+            "cpu",
+            "custom/separator3",
+            "power-profiles-daemon",
+            "custom/separator3",
+            "battery"
+        ]
+    }
+]
