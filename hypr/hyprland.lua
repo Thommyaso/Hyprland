@@ -281,6 +281,26 @@ hl.bind(mainMod .. " + l", hl.dsp.focus({ direction = "right" }))
 hl.bind(mainMod .. " + j",    hl.dsp.focus({ direction = "up" }))
 hl.bind(mainMod .. " + k",  hl.dsp.focus({ direction = "down" }))
 
+-- screenshot without saving the file
+-- hl.bind("SHIFT + Print", hl.dsp.exec_cmd('grim -g "$(slurp -d)" - | wl-copy'))
+
+-- screenshot with file save
+hl.bind(
+    "SHIFT + Print",
+    hl.dsp.exec_cmd([[
+        sh -c '
+            dir="$HOME/Pictures/Screenshots"
+            mkdir -p "$dir"
+
+            file="$dir/$(date +%Y-%m-%d_%H-%M-%S).png"
+            geometry="$(slurp -d)" || exit 1
+
+            grim -g "$geometry" "$file" &&
+            wl-copy < "$file"
+        '
+    ]])
+)
+
 -- Switch workspaces with mainMod + [0-9]
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]
 for i = 1, 10 do
