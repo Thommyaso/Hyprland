@@ -58,7 +58,7 @@ local menu        = "hyprlauncher"
 hl.on("hyprland.start", function ()
 	hl.exec_cmd(terminal)
 	hl.exec_cmd(browser)
-	hl.exec_cmd("waybar")
+	-- hl.exec_cmd("waybar")
     hl.exec_cmd("pactl set-sink-volume @DEFAULT_SINK@ 0%")
 end)
 
