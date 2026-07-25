@@ -55,10 +55,23 @@ local menu        = "hyprlauncher"
 -- Autostart necessary processes (like notifications daemons, status bars, etc.)
 -- Or execute your favorite apps at launch like this:
 --
-hl.on("hyprland.start", function () 
+hl.on("hyprland.start", function ()
 	hl.exec_cmd(terminal)
 	hl.exec_cmd(browser)
 	hl.exec_cmd("waybar")
+    hl.exec_cmd("pactl set-sink-volume @DEFAULT_SINK@ 0%")
+end)
+
+hl.on("config.reloaded", function ()
+    hl.exec_cmd("pkill waybar")
+    hl.timer(function()
+            hl.exec_cmd("waybar &")
+        end, {
+            timeout = 200,
+            type = "oneshot"
+        }
+    )
+
     hl.exec_cmd("pactl set-sink-volume @DEFAULT_SINK@ 0%")
 end)
 
