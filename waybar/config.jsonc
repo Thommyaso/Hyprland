@@ -76,9 +76,9 @@
 
         "modules-right": [
             "custom/separator",
-            // "custom/clock",
-            // "custom/separator3",
             "pulseaudio",
+            "custom/separator3",
+            "bluetooth",
             "custom/separator4",
             "network",
             "custom/separator3",
