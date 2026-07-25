@@ -97,6 +97,7 @@ margin-left: 4px;
 
 #memory,
 #mpris,
+#custom-media,
 #tray,
 #cpu,
 #custom-clock,
@@ -242,6 +243,11 @@ tooltip label {
     }
 }
 
+#custom-media.paused {
+    opacity: 0.5;
+}
+
+#custom-media.playing,
 #mpris {
 opacity: 1;
 color: @fg;

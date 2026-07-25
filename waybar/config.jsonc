@@ -23,7 +23,8 @@
             "custom/updatespacman",
             "custom/update",
             "custom/separator2",
-            "mpris",
+            // "mpris",
+            "custom/media",
             "custom/separator6"
         ],
         "modules-center": ["custom/separator", "custom/clock", "custom/separator2"],

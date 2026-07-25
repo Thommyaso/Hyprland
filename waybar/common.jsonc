@@ -20,7 +20,8 @@
     "custom/updatespacman",
     "custom/update",
     "custom/separator2",
-    "mpris",
+    // "mpris",
+    "custom/media",
     "custom/separator6"
     ],
     "modules-center": ["custom/separator", "custom/clock", "custom/separator2"],
@@ -256,16 +257,22 @@
             "critical": 10
         }
     },
-    "mpris": {
-        "format": " {dynamic}",
-        "format-paused": "<span color='grey'>{status_icon} {dynamic}</span>",
-        "title-len": 20,
-        "dynamic-order": ["artist", "title"],
-        "tooltip-format": "{player} ({status}):\n{artist} - {title}", 
-        "status-icons": {
-            "paused": "󰝛"
-        },
-    //"ignored-players": ["firefox", "chromium", "brave"]
+    // "mpris": {
+    //     "format": " {dynamic}",
+    //     "format-paused": "<span color='grey'>{status_icon} {dynamic}</span>",
+    //     "title-len": 20,
+    //     "dynamic-order": ["artist", "title"],
+    //     "tooltip-format": "{player} ({status}):\n{artist} - {title}", 
+    //     "status-icons": {
+    //         "paused": "󰝛"
+    //     },
+    //     "ignored-players": ["firefox", "chromium", "brave"]
+    // },
+    "custom/media": {
+        "exec": "/etc/xdg/waybar/media.sh",
+        "return-type": "json",
+        "interval": 2,
+        "on-click": "playerctl play-pause"
     },
     "idle_inhibitor": {
         "format": "{icon}",
