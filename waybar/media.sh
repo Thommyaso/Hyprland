@@ -3,8 +3,6 @@
 status="$(playerctl status 2>/dev/null)"
 text="$(playerctl metadata --format '{{artist}} - {{title}}' 2>/dev/null)"
 
-pwd="$(pwd)"
-
 case "$status" in
     Playing)
         class="playing"
@@ -17,12 +15,6 @@ case "$status" in
         ;;
 esac
 
-printf '{"text":"%s","class":"%s", "pwd": "%s"}\n' \
+printf '{"text":"%s","class":"%s"}\n' \
     "${text//\"/\\\"}" \
-    "$class" \
-    "$pwd" >> "/tmp/path.txt"
-
-printf '{"text":"%s","class":"%s", "pwd": "%s"}\n' \
-    "${text//\"/\\\"}" \
-    "$class" \
-    "$pwd"
+    "$class"
