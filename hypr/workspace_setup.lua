@@ -42,20 +42,20 @@ function M.run()
     standard_app_config();
 
 	local connected_monitor = detect_primary_display();
-     if connected_monitor then
-         for wrk_spc = 1, 7 do
-             hl.workspace_rule({ workspace = tostring(wrk_spc), monitor = connected_monitor});
-         end
+    if connected_monitor then
+        for wrk_spc = 1, 7 do
+            hl.workspace_rule({ workspace = tostring(wrk_spc), monitor = connected_monitor});
+        end
 
-         for wrk_spc = 8, 10 do
-             hl.workspace_rule({ workspace = tostring(wrk_spc), monitor = SECONDARY_MONITOR});
-         end
-         return;
-     end
+        for wrk_spc = 8, 10 do
+            hl.workspace_rule({ workspace = tostring(wrk_spc), monitor = SECONDARY_MONITOR});
+        end
+        return;
+    end
 
-     for wrk_spc = 1, 10 do
-         hl.workspace_rule({ workspace = tostring(wrk_spc), monitor = SECONDARY_MONITOR});
-     end
- end
+    for wrk_spc = 1, 10 do
+        hl.workspace_rule({ workspace = tostring(wrk_spc), monitor = SECONDARY_MONITOR});
+    end
+end
 
- return M;
+return M;

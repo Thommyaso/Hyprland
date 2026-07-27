@@ -425,7 +425,15 @@ hl.window_rule({
 	match = {
 		class = "127.0.0.1__debugger-frontend_rn_fusebox.html"
 	},
-	workspace = "0 silent",
+	workspace = "10 silent",
+})
+
+hl.window_rule({
+	name = "teams via firefox",
+	match = {
+		class = "firefox"
+	},
+	workspace = "10 silent",
 })
 
 -------------------------
